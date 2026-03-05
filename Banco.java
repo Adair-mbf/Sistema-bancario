@@ -8,7 +8,7 @@ public class Banco {
     }
     public void cadastrarConta(Conta conta1){
         this.contas.add(conta1);
-        System.out.println("Conta cadastrada com sucesso!");
+        System.out.println("\nConta cadastrada com sucesso!");
         System.out.println("O número da sua conta é: " + conta1.getNumeroConta() + "\n");
     }
     public Conta buscarConta(int numeroConta){
