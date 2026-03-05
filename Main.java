@@ -5,7 +5,7 @@ public class Main {
         Scanner leitor = new Scanner(System.in);
         Banco banco1 = new Banco();
 
-        int opcao;
+        byte opcao;
 
         do {
             System.out.println("O que você deseja fazer?");
@@ -16,7 +16,7 @@ public class Main {
             System.out.println("5- Transferir valores de uma conta para outra");
             System.out.println("0- Sair");
 
-            opcao = leitor.nextInt();
+            opcao = leitor.nextByte();
             leitor.nextLine();
 
             switch (opcao) {

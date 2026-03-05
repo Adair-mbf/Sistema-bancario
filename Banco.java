@@ -2,6 +2,8 @@ import java.util.ArrayList;
 
 public class Banco {
     private ArrayList<Conta> contas =  new ArrayList<>();
+    private String agencia;
+    private String nomeBanco;
 
     public Banco() {
         this.contas = new ArrayList<>();
