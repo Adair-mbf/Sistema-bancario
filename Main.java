@@ -84,10 +84,10 @@ public class Main {
                     break;
                 }
                 case 0:
-                    System.out.println("Saindo...");
+                    System.out.println("Saindo...\n");
                     break;
                 default:
-                    System.out.println("Opção inválida!");
+                    System.out.println("Opção inválida!\n");
                     break;
             }
         } while (opcao != 0);
