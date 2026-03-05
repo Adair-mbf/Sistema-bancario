@@ -40,8 +40,8 @@ public class Conta {
     }
     public void transferir(Conta conta2, float valorTransferencia){
         if(this.saldo >= valorTransferencia && valorTransferencia > 0){
-            this.sacar(valorTransferencia);
-            conta2.depositar(valorTransferencia);
+            this.saldo -= valorTransferencia;
+            conta2.saldo += valorTransferencia;
             System.out.println("Transferência realizada!\n");
         }
         else{
