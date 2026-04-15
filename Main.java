@@ -101,8 +101,7 @@ public class Main {
                         double valorSaque = leitor.nextDouble();
                         leitor.nextLine();
                         conta.sacar(valorSaque);
-                        System.out.println("Saldo atual:");
-                        System.out.println("R$ " + conta.getSaldo() + "\n");
+                        revelarSaldo(conta);
                     }
                     break;
                 }
@@ -113,8 +112,7 @@ public class Main {
                         double valorDeposito = leitor.nextDouble();
                         leitor.nextLine();
                         conta.depositar(valorDeposito);
-                        System.out.println("Saldo atual:");
-                        System.out.println("R$ " + conta.getSaldo() + "\n");
+                        revelarSaldo(conta);
                     }
                     break;
                 }
@@ -129,8 +127,7 @@ public class Main {
                         Conta conta2 = banco1.buscarConta(numeroConta2);
                         if (conta2 != null) {
                             conta.transferir(conta2, valorTransferencia);
-                            System.out.println("Saldo atual:");
-                            System.out.println("R$ " + conta.getSaldo() + "\n");
+                            revelarSaldo(conta);
                         }
                     }
                     break;
@@ -146,9 +143,14 @@ public class Main {
         }while (opcao!=0);
         leitor.close();
     }
+
     private static Conta interacaoBuscarConta(Banco banco, Scanner leitor){
         System.out.println("Informe o número da conta:");
         String numeroConta = leitor.nextLine();
         return banco.buscarConta(numeroConta);
+    }
+    private static void revelarSaldo(Conta conta){
+        System.out.println("Saldo atual:");
+        System.out.println("R$ " + conta.getSaldo() + "\n");
     }
 }
