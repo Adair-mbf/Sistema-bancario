@@ -4,7 +4,7 @@ import Cliente.Titular;
 public abstract class Conta {
     private Titular titular;
     protected double saldo;
-    protected String numeroConta;
+    private String numeroConta;
     private static int geradorNumeroConta = 1000;
 
     public Conta(Titular titular, double saldo, String prefixo){
