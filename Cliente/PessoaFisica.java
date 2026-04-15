@@ -6,7 +6,6 @@ public class PessoaFisica extends Titular{
         super(nome, telefone, "PF");
         this.cpf = cpf;
     }
-
     public String getCpf() {
         return cpf;
     }
