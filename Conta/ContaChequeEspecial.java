@@ -1,6 +1,6 @@
 package Conta;
 import Cliente.Titular;
-abstract class ContaChequeEspecial extends Conta{
+public abstract class ContaChequeEspecial extends Conta{
     private int chequeEspecial;
 
     public ContaChequeEspecial(Titular titular, double saldo, String prefixo) {
