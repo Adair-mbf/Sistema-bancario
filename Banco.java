@@ -1,24 +1,29 @@
 import java.util.ArrayList;
+import Conta.Conta;
 
 public class Banco {
-    private ArrayList<Conta> contas =  new ArrayList<>();
     private String agencia;
-    private String nomeBanco;
+    private String nome;
+    private ArrayList<Conta> contas;
 
-    public Banco() {
+    public Banco(String agencia, String nome) {
+        this.agencia = agencia;
+        this.nome = nome;
         this.contas = new ArrayList<>();
     }
-    public void cadastrarConta(Conta conta1){
-        this.contas.add(conta1);
-        System.out.println("\nConta cadastrada com sucesso!");
-        System.out.println("O número da sua conta é: " + conta1.getNumeroConta() + "\n");
+
+    public void cadastrarConta(Conta conta){
+        this.contas.add(conta);
+        System.out.println("Conta cadastrada com sucesso!");
+        System.out.println("O número da sua conta é: " + conta.getNumeroConta() + "\n");
     }
-    public Conta buscarConta(int numeroConta){
+    public Conta buscarConta(String numeroConta){
         for(int i = 0; i < contas.size(); i++){
-            if(numeroConta == contas.get(i).getNumeroConta()){
+            if(numeroConta.equals(contas.get(i).getNumeroConta())){
                 return contas.get(i);
             }
         }
+        System.out.println("Conta não encontrada!");
         return null;
     }
 }
