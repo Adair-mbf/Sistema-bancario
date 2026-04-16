@@ -6,7 +6,9 @@ public class ContaPoupanca extends Conta{
         super(titular,saldo, "CP");
     }
     public double render(){
-        double taxaRendimento = this.saldo * 0.005;
-        return this.saldo += (taxaRendimento);
+        double taxaRendimento = getSaldo() * 0.005;
+        double mudarSaldo = getSaldo() + taxaRendimento;
+        setSaldo(mudarSaldo);
+        return getSaldo();
     }
 }

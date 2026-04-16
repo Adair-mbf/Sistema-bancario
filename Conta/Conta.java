@@ -3,7 +3,7 @@ import Cliente.Titular;
 
 public abstract class Conta {
     private Titular titular;
-    protected double saldo;
+    private double saldo;
     private String numeroConta;
     private static int geradorNumeroConta = 1000;
 
@@ -18,7 +18,10 @@ public abstract class Conta {
     public String getNumeroConta() {
         return numeroConta;
     }
-
+    
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
     public double depositar(double valorDeposito){
         if(valorDeposito <= 0){
             System.out.println("Valor inválido!");
