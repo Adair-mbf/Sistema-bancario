@@ -1,6 +1,6 @@
 # Sistema Bancário
 
-**Esse repositório foi feito para demonstrar a minha evolução fazendo um sistema bancário, que é considerado o básico de um programador iniciante, o propósito aqui é mostrar como eu posso ir deixando cada vez mais complexo algo simples de se implementar**
+**Fazer a implementação de um banco, na maioria das vezes, é um dos primeiros desafios de um programador. Este projeto nasce dessa premissa, mas busca ir além do óbvio. Aqui, documento como vou transformando uma implementação inicial simples em um sistema cada vez mais complexo e bem estruturado.**
 
 ---
 
